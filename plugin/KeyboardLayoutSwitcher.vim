@@ -2,14 +2,14 @@
 
 " Properties
 
-" Index of default keyboard layout 
+" Index of default keyboard layout
 if !exists("g:kls_defaultInputSourceIndex")
     let g:kls_defaultInputSourceIndex = 0 " Use 0 if you are using default english keyboard layout (U.S.)
 endif
 
 " Path to KeyboardLayoutSwitcher binary
 if !exists("g:kls_switcherPath")
-    let g:kls_switcherPath = "/home/e-max/tmp/vim/KeyboardLayoutSwitcher/bin/KeyboardLayoutSwitcher"
+    let g:kls_switcherPath = findfile('bin/KeyboardLayoutSwitcher', &rtp)
 endif
 
 " Layout storing when Vim’s focus is lost / gained
