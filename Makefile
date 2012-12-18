@@ -1,8 +1,8 @@
 MKDIR=mkdir -vp
 
 x11: mkdir
-	$(CC) -L/usr/include/X11 -lX11 -o bin/KeyboardLayoutSwitcher src/xkbswitchlang.c
+	$(CC) -o bin/KeyboardLayoutSwitcher src/xkbswitchlang.c -L/usr/include/X11 -lX11
 mkdir:
 	@$(MKDIR) bin
 clean:
-	$(RM) bin/KeyboardLayoutSwitcher 
+	$(RM) bin/KeyboardLayoutSwitcher
